@@ -1,4 +1,7 @@
-import Route from '@ember/routing/route';
+import Route from '@ember/routing/route'
 
-export default class SeriesRoute extends Route {
-}
+export default Route.extend({
+  model: function() {
+    return this.store.find("seriesItem");
+  },
+});
